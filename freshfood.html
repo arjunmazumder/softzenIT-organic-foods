@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Market | saleZen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --zen-green: #00b894;
+            --zen-dark: #2d3436;
+            --zen-light-bg: #f9fbfd;
+            --zen-accent: #6c5ce7;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--zen-light-bg);
+            color: var(--zen-dark);
+        }
+
+        /* Top Deal Bar */
+        .deal-bar {
+            background: var(--zen-dark);
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 8px 0;
+            text-align: center;
+        }
+
+        /* Modern Navbar */
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.03);
+            padding: 20px 0;
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--zen-dark) !important;
+        }
+
+        .navbar-brand span {
+            color: var(--zen-green);
+        }
+
+        /* Category Sidebar */
+        .side-nav {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            position: sticky;
+            top: 100px;
+        }
+
+        .side-nav-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 15px;
+            color: #636e72;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: 0.3s;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .side-nav-link:hover, .side-nav-link.active {
+            background: rgba(0, 184, 148, 0.1);
+            color: var(--zen-green);
+        }
+
+        /* Fresh Product Card */
+        .fresh-card {
+            background: white;
+            border-radius: 24px;
+            padding: 15px;
+            border: 1px solid transparent;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .fresh-card:hover {
+            border-color: var(--zen-green);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+        }
+
+        .img-wrapper {
+            background: #f1f2f6;
+            border-radius: 18px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .product-img {
+            max-width: 75%;
+            transition: 0.5s ease;
+        }
+
+        .fresh-card:hover .product-img {
+            transform: scale(1.1);
+        }
+
+        .badge-fresh {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            background: white;
+            color: var(--zen-green);
+            font-weight: 800;
+            font-size: 0.65rem;
+            padding: 5px 10px;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .btn-add-zen {
+            background: var(--zen-green);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+
+        .btn-add-zen:hover {
+            background: var(--zen-dark);
+            transform: rotate(90deg);
+        }
+
+        /* Cart Floating Summary */
+        .cart-summary {
+            background: var(--zen-accent);
+            color: white;
+            border-radius: 20px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="deal-bar">
+        ⚡ FLASH SALE: Get 20% off on all organic dairy until Midnight! ⚡
+    </div>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">soft<span>ZenIT</span> Fresh</a>
+            <div class="d-flex align-items-center gap-3">
+                <div class="input-group d-none d-md-flex" style="width: 350px;">
+                    <input type="text" class="form-control bg-light border-0 rounded-pill ps-4" placeholder="Search for groceries...">
+                </div>
+                <div class="position-relative ms-2">
+                    <i class="bi bi-cart3 fs-4"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success" style="font-size: 0.6rem;">3</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="row g-4">
+            
+            <aside class="col-lg-3">
+                <div class="side-nav shadow-sm">
+                    <h6 class="fw-800 text-uppercase small mb-4 opacity-50" style="letter-spacing: 1px;">Categories</h6>
+                    <a href="#" class="side-nav-link active"><i class="bi bi-grid"></i> All Products</a>
+                    <a href="#" class="side-nav-link"><i class="bi bi-egg"></i> Dairy & Eggs</a>
+                    <a href="#" class="side-nav-link"><i class="bi bi-apple"></i> Fruits & Veg</a>
+                    <a href="#" class="side-nav-link"><i class="bi bi-cup-hot"></i> Beverages</a>
+                    <a href="#" class="side-nav-link"><i class="bi bi-box-seam"></i> Frozen Foods</a>
+                    <a href="#" class="side-nav-link"><i class="bi bi-stars"></i> Organic Picks</a>
+
+                    <div class="cart-summary shadow">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="small opacity-75">Your Basket</span>
+                            <i class="bi bi-bag-check"></i>
+                        </div>
+                        <h4 class="fw-800 mb-1">BDT 1,420</h4>
+                        <p class="small mb-3">Free shipping applied!</p>
+                        <button class="btn btn-light w-100 rounded-pill fw-bold btn-sm py-2">Checkout Now</button>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="col-lg-9">
+                <div class="d-flex justify-content-between align-items-end mb-4">
+                    <div>
+                        <h2 class="fw-800 mb-1">Fresh Arrivals</h2>
+                        <p class="text-muted small">Hand-picked quality from local vendors in Dhaka.</p>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-white btn-sm border rounded-pill px-3">Sort by Price</button>
+                        <button class="btn btn-white btn-sm border rounded-pill px-3">Filter</button>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    
+                    <div class="col-md-4 col-sm-6">
+                        <div class="fresh-card shadow-sm">
+                            <span class="badge-fresh"><i class="bi bi-check2-circle"></i> FRESH</span>
+                            <div class="img-wrapper">
+                                <img src="img/fresh/milk.jpg">
+                            </div>
+                            <h6 class="fw-bold mb-1">Farm Fresh Whole Milk</h6>
+                            <p class="text-muted small mb-3">1 Litre • Organic</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-800 fs-5">BDT 95</span>
+                                <button class="btn-add-zen shadow-sm"><i class="bi bi-plus-lg"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="fresh-card shadow-sm">
+                            <div class="img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1899&auto=format&fit=crop" class="product-img" alt="Burger">
+                            </div>
+                            <h6 class="fw-bold mb-1">Classic Beef Patty</h6>
+                            <p class="text-muted small mb-3">2 Units • Grass Fed</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-800 fs-5">BDT 450</span>
+                                <button class="btn-add-zen shadow-sm"><i class="bi bi-plus-lg"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="fresh-card shadow-sm">
+                            <span class="badge-fresh" style="color: #ff7675;"><i class="bi bi-fire"></i> TRENDING</span>
+                            <div class="img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?q=80&w=1469&auto=format&fit=crop" class="product-img" alt="Cheese">
+                            </div>
+                            <h6 class="fw-bold mb-1">Artisan Cheddar Cheese</h6>
+                            <p class="text-muted small mb-3">250g • Aged 12 Months</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-800 fs-5">BDT 320</span>
+                                <button class="btn-add-zen shadow-sm"><i class="bi bi-plus-lg"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="fresh-card shadow-sm">
+                            <div class="img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1470&auto=format&fit=crop" class="product-img" alt="Salad">
+                            </div>
+                            <h6 class="fw-bold mb-1">Garden Mix Salad Bowl</h6>
+                            <p class="text-muted small mb-3">Single Serve • Fresh</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-800 fs-5">BDT 210</span>
+                                <button class="btn-add-zen shadow-sm"><i class="bi bi-plus-lg"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <footer class="bg-white py-5 border-top">
+        <div class="container text-center">
+            <h5 class="fw-800">saleZen Fresh</h5>
+            <p class="text-muted small">Quality you can taste, delivered to your door.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

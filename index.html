@@ -87,9 +87,22 @@
                     <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
                         <small class="fa fa-user text-body"></small>
                     </a>
-                    <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
+                    <!-- <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
                         <small class="fa fa-shopping-bag text-body"></small>
-                    </a>
+                    </a> -->
+
+                    <div style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                        <a href="cart.html" class="nav-item nav-link position-relative p-0">
+                            <i class="bi bi-cart4 fs-4"></i>
+                            
+                            <span id="cart-count" 
+                                class="position-absolute badge rounded-pill bg-danger" 
+                                style="font-size: 0.6rem; top: -5px; right: -10px; padding: 3px 6px;">
+                                0
+                            </span>
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </nav>
@@ -108,8 +121,9 @@
                             <div class="row justify-content-start">
                                 <div class="col-lg-7">
                                     <h1 class="display-2 mb-5 animated slideInDown">Organic Food Is Good For Health</h1>
-                                    <a href="" class="btn btn-primary rounded-pill py-sm-3 px-sm-5">Products</a>
-                                    <a href="" class="btn btn-secondary rounded-pill py-sm-3 px-sm-5 ms-3">Services</a>
+                                    <!-- <a href="product.html" class="btn btn-primary rounded-pill py-sm-3 px-sm-5">Products</a> -->
+                                     <a href="product.html" class="btn btn-primary rounded-pill py-sm-3 px-sm-5">Products</a>
+                                    <a href="services.html" class="btn btn-secondary rounded-pill py-sm-3 px-sm-5 ms-3">Services</a>
                                 </div>
                             </div>
                         </div>
@@ -219,13 +233,13 @@
                 <div class="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
                     <ul class="nav nav-pills d-inline-flex justify-content-end mb-5">
                         <li class="nav-item me-2">
-                            <a class="btn btn-outline-primary border-2 active" data-bs-toggle="pill" href="#tab-1">Vegetable</a>
+                           <a class="btn btn-outline-primary border-2" href="vegetable.html">Vegetable</a>
                         </li>
                         <li class="nav-item me-2">
-                            <a class="btn btn-outline-primary border-2" data-bs-toggle="pill" href="#tab-2">Fruits </a>
+                            <a class="btn btn-outline-primary border-2"  href="fruits.html">Fruits </a>
                         </li>
                         <li class="nav-item me-0">
-                            <a class="btn btn-outline-primary border-2" data-bs-toggle="pill" href="#tab-3">Fresh</a>
+                            <a class="btn btn-outline-primary border-2"  href="freshfood.html">Fresh</a>
                         </li>
                     </ul>
                 </div>
@@ -233,7 +247,7 @@
             <div class="tab-content">
                 <div id="tab-1" class="tab-pane fade show p-0 active">
                     <div class="row g-4">
-                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <!-- <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                             <div class="product-item">
                                 <div class="position-relative bg-light overflow-hidden">
                                     <img class="img-fluid w-100" src="img/product-1.jpg" alt="">
@@ -246,163 +260,252 @@
                                 </div>
                                 <div class="d-flex border-top">
                                     <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
+                                        <a class="text-body" href="viewdetailsproducts.html"><i class="fa fa-eye text-primary me-2"></i>View detail</a>
                                     </small>
                                     <small class="w-50 text-center py-2">
                                         <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
                                     </small>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        </div> -->
+                       <!-- card-1  -->
+                       <div class="col-xl-3 col-lg-4 col-md-6">
                             <div class="product-item">
                                 <div class="position-relative bg-light overflow-hidden">
-                                    <img class="img-fluid w-100" src="img/product-2.jpg" alt="">
+                                    <img class="img-fluid w-100" src="img/product-1.jpg" alt="Tomato">
                                     <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
                                 </div>
                                 <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
+                                    <a class="d-block h5 mb-2" href="#">Fresh Tomato</a>
                                     <span class="text-primary me-1">BDT 19.00</span>
                                     <span class="text-body text-decoration-line-through">BDT 29.00</span>
                                 </div>
                                 <div class="d-flex border-top">
                                     <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
+                                        <a class="text-body" href="viewdetailsproducts.html?name=Fresh Tomato&price=19.00&oldprice=29.00&img=img/product-1.jpg">
+                                            <i class="fa fa-eye text-primary me-2"></i>View detail
+                                        </a>
                                     </small>
                                     <small class="w-50 text-center py-2">
-                                        <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
+                                        <a class="text-body" href="javascript:void(0)" onclick="addToCartClick()">
+                                            <i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart
+                                        </a>
                                     </small>
                                 </div>
                             </div>
                         </div>
+
+                          <!-- card-2  -->
+                      <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="product-item">
+                                <div class="position-relative bg-light overflow-hidden">
+                                    <img class="img-fluid w-100" src="img/product-2.jpg" alt="Organic Pineapple">
+                                    <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
+                                </div>
+                                
+                                <div class="text-center p-4">
+                                    <a class="d-block h5 mb-2" href="#">Organic Pineapple</a>
+                                    <span class="text-primary me-1">BDT 80.00</span>
+                                    <span class="text-body text-decoration-line-through">BDT 100.00</span>
+                                </div>
+                                
+                                <div class="d-flex border-top">
+                                    <small class="w-50 text-center border-end py-2">
+                                        <a class="text-body" href="viewdetailsproducts.html?name=Organic Pineapple&price=80.00&oldprice=100.00&img=img/product-2.jpg">
+                                            <i class="fa fa-eye text-primary me-2"></i>View detail
+                                        </a>
+                                    </small>
+                                   <small class="w-50 text-center py-2">
+                                        <a class="text-body" href="javascript:void(0)" onclick="addToCartClick()">
+                                            <i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart
+                                        </a>
+                                    </small>
+                                </div>
+                            </div>
+                      </div>
+
+
+                      <!-- card-3  -->
+
                         <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                             <div class="product-item">
                                 <div class="position-relative bg-light overflow-hidden">
-                                    <img class="img-fluid w-100" src="img/product-3.jpg" alt="">
+                                    <img class="img-fluid w-100" src="img/product-3.jpg" alt="Fresh Pepper">
                                     <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
                                 </div>
+                                
                                 <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
-                                    <span class="text-primary me-1">BDT 19.00</span>
-                                    <span class="text-body text-decoration-line-through">BDT 29.00</span>
+                                    <a class="d-block h5 mb-2" href="#">Fresh Pepper</a>
+                                    <span class="text-primary me-1">BDT 50.00</span>
+                                    <span class="text-body text-decoration-line-through">BDT 70.00</span>
                                 </div>
+                                
                                 <div class="d-flex border-top">
                                     <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
+                                        <a class="text-body" href="viewdetailsproducts.html?name=Fresh Pepper&price=50.00&oldprice=70.00&img=img/product-3.jpg">
+                                            <i class="fa fa-eye text-primary me-2"></i>View detail
+                                        </a>
                                     </small>
                                     <small class="w-50 text-center py-2">
-                                        <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
+                                        <a class="text-body" href="javascript:void(0)" onclick="addToCartClick()">
+                                            <i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart
+                                        </a>
                                     </small>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+           
+                         <!-- cart-4  -->
+
+                       <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                             <div class="product-item">
                                 <div class="position-relative bg-light overflow-hidden">
-                                    <img class="img-fluid w-100" src="img/product-4.jpg" alt="">
+                                    <img class="img-fluid w-100" src="img/product-4.jpg" alt="Fresh Strawberry">
                                     <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
                                 </div>
+                                
                                 <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
-                                    <span class="text-primary me-1">BDT 19.00</span>
-                                    <span class="text-body text-decoration-line-through">BDT 29.00</span>
+                                    <a class="d-block h5 mb-2" href="#">Fresh Strawberry</a>
+                                    <span class="text-primary me-1">BDT 260.00</span>
+                                    <span class="text-body text-decoration-line-through">BDT 320.00</span>
                                 </div>
+                                
                                 <div class="d-flex border-top">
                                     <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
+                                        <a class="text-body" href="viewdetailsproducts.html?name=Fresh Strawberry&price=260.00&oldprice=320.00&img=img/product-4.jpg">
+                                            <i class="fa fa-eye text-primary me-2"></i>View detail
+                                        </a>
                                     </small>
                                     <small class="w-50 text-center py-2">
-                                        <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
+                                        <a class="text-body" href="javascript:void(0)" onclick="addToCartClick()">
+                                            <i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart
+                                        </a>
                                     </small>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- card-5  -->
+
                         <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                             <div class="product-item">
                                 <div class="position-relative bg-light overflow-hidden">
-                                    <img class="img-fluid w-100" src="img/product-5.jpg" alt="">
+                                    <img class="img-fluid w-100" src="img/product-5.jpg" alt="Fresh Cucumber">
                                     <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
                                 </div>
+                                
                                 <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
-                                    <span class="text-primary me-1">BDT 19.00</span>
-                                    <span class="text-body text-decoration-line-through">BDT 29.00</span>
+                                    <a class="d-block h5 mb-2" href="#">Fresh Cucumber</a>
+                                    <span class="text-primary me-1">BDT 80.00</span>
+                                    <span class="text-body text-decoration-line-through">BDT 100.00</span>
                                 </div>
+                                
                                 <div class="d-flex border-top">
                                     <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
+                                        <a class="text-body" href="viewdetailsproducts.html?name=Fresh Cucumber&price=80.00&oldprice=100.00&img=img/product-5.jpg">
+                                            <i class="fa fa-eye text-primary me-2"></i>View detail
+                                        </a>
                                     </small>
                                     <small class="w-50 text-center py-2">
-                                        <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
+                                        <a class="text-body" href="javascript:void(0)" onclick="addToCartClick()">
+                                            <i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart
+                                        </a>
                                     </small>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- card-5  -->
+
                         <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="product-item">
                                 <div class="position-relative bg-light overflow-hidden">
-                                    <img class="img-fluid w-100" src="img/product-6.jpg" alt="">
+                                    <img class="img-fluid w-100" src="img/product-6.jpg" alt="Fresh Tomato">
                                     <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
                                 </div>
+                                
                                 <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
-                                    <span class="text-primary me-1">BDT 19.00</span>
-                                    <span class="text-body text-decoration-line-through">BDT 29.00</span>
+                                    <a class="d-block h5 mb-2" href="#">Fresh Tomato</a>
+                                    <span class="text-primary me-1">BDT 50.00</span>
+                                    <span class="text-body text-decoration-line-through">BDT 70.00</span>
                                 </div>
+                                
                                 <div class="d-flex border-top">
                                     <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
+                                        <a class="text-body" href="viewdetailsproducts.html?name=Fresh Tomato&price=50.00&oldprice=70.00&img=img/product-6.jpg">
+                                            <i class="fa fa-eye text-primary me-2"></i>View detail
+                                        </a>
                                     </small>
                                     <small class="w-50 text-center py-2">
-                                        <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
+                                        <a class="text-body" href="javascript:void(0)" onclick="addToCartClick()">
+                                            <i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart
+                                        </a>
                                     </small>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- card-6  -->
                         <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                             <div class="product-item">
                                 <div class="position-relative bg-light overflow-hidden">
-                                    <img class="img-fluid w-100" src="img/product-7.jpg" alt="">
+                                    <img class="img-fluid w-100" src="img/product-7.jpg" alt="Fresh Potatoes">
                                     <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
                                 </div>
+                                
                                 <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
-                                    <span class="text-primary me-1">BDT 19.00</span>
-                                    <span class="text-body text-decoration-line-through">BDT 29.00</span>
+                                    <a class="d-block h5 mb-2" href="#">Fresh Potatoes</a>
+                                    <span class="text-primary me-1">BDT 30.00</span>
+                                    <span class="text-body text-decoration-line-through">BDT 45.00</span>
                                 </div>
+                                
                                 <div class="d-flex border-top">
                                     <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
+                                        <a class="text-body" href="viewdetailsproducts.html?name=Fresh Potatoes&price=30.00&oldprice=45.00&img=img/product-7.jpg">
+                                            <i class="fa fa-eye text-primary me-2"></i>View detail
+                                        </a>
                                     </small>
                                     <small class="w-50 text-center py-2">
-                                        <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
+                                        <a class="text-body" href="javascript:void(0)" onclick="addToCartClick()">
+                                            <i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart
+                                        </a>
                                     </small>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- card-7 -->
+
                         <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                             <div class="product-item">
                                 <div class="position-relative bg-light overflow-hidden">
-                                    <img class="img-fluid w-100" src="img/product-8.jpg" alt="">
+                                    <img class="img-fluid w-100" src="img/product-8.jpg" alt="Fresh Banana">
                                     <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
                                 </div>
+                                
                                 <div class="text-center p-4">
-                                    <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
-                                    <span class="text-primary me-1">BDT 19.00</span>
-                                    <span class="text-body text-decoration-line-through">BDT 29.00</span>
+                                    <a class="d-block h5 mb-2" href="#">Fresh Banana</a>
+                                    <span class="text-primary me-1">BDT 120.00</span>
+                                    <span class="text-body text-decoration-line-through">BDT 150.00</span>
                                 </div>
+                                
                                 <div class="d-flex border-top">
                                     <small class="w-50 text-center border-end py-2">
-                                        <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
+                                        <a class="text-body" href="viewdetailsproducts.html?name=Fresh Banana&price=120.00&oldprice=150.00&img=img/product-8.jpg">
+                                            <i class="fa fa-eye text-primary me-2"></i>View detail
+                                        </a>
                                     </small>
                                     <small class="w-50 text-center py-2">
-                                        <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
+                                        <a class="text-body" href="javascript:void(0)" onclick="addToCartClick()">
+                                            <i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart
+                                        </a>
                                     </small>
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
-                            <a class="btn btn-primary rounded-pill py-3 px-5" href="">Browse More Products</a>
+                            <a class="btn btn-primary rounded-pill py-3 px-5" href="product.html">Browse More Products</a>
                         </div>
                     </div>
                 </div>
@@ -781,8 +884,10 @@
                     </div>
                     <span class="save-tag">Save BDT 90</span>
                     <div class="actions">
-                        <button class="btn-cart"><i class="fas fa-shopping-cart"></i> Add To Cart</button>
-                        <button class="btn-buy">Buy now</button>
+                        <button class="btn-cart" onclick="addToCart('Gawa Ghee 1kg', 1710, 'img/gawa ghee/p1.jpg')">
+                            <i class="fas fa-shopping-cart"></i> Add To Cart
+                        </button>
+                        <button class="btn-buy" onclick="buyNow('Gawa Ghee 1kg', 1710, 'img/gawa ghee/p1.jpg')">Buy now</button>
                     </div>
                 </div>
             </div>
@@ -792,7 +897,7 @@
             <span class="badge offered">Offered Items</span>
             <div class="card-content">
                 <div class="img-box">
-                    <img src="img/gawa ghee/deshi mustard oil.jpg" alt="Sundarban Honey">
+                    <img src="img/gawa ghee/deshi mustard oil.jpg" alt="Mustard Oil">
                 </div>
                 <div class="details">
                     <h3>Deshi Mustard oil 1kg</h3>
@@ -802,8 +907,10 @@
                     </div>
                     <span class="save-tag">Save BDT 300</span>
                     <div class="actions">
-                        <button class="btn-cart"><i class="fas fa-shopping-cart"></i> Add To Cart</button>
-                        <button class="btn-buy">Buy now</button>
+                        <button class="btn-cart" onclick="addToCart('Deshi Mustard oil 1kg', 2200, 'img/gawa ghee/deshi mustard oil.jpg')">
+                            <i class="fas fa-shopping-cart"></i> Add To Cart
+                        </button>
+                        <button class="btn-buy" onclick="buyNow('Deshi Mustard oil 1kg', 2200, 'img/gawa ghee/deshi mustard oil.jpg')">Buy now</button>
                     </div>
                 </div>
             </div>
@@ -815,7 +922,7 @@
             <span class="badge best-selling">Best Selling</span>
             <div class="card-content">
                 <div class="img-box">
-                    <img src="img/gawa ghee/lachcha semai.jpeg" alt="Gawa Ghee">
+                    <img src="img/gawa ghee/lachcha semai.jpeg" alt="Lachcha Semai">
                 </div>
                 <div class="details">
                     <h3>Lachcha Semai</h3>
@@ -825,8 +932,10 @@
                     </div>
                     <span class="save-tag">Save BDT 90</span>
                     <div class="actions">
-                        <button class="btn-cart"><i class="fas fa-shopping-cart"></i> Add To Cart</button>
-                        <button class="btn-buy">Buy now</button>
+                        <button class="btn-cart" onclick="addToCart('Lachcha Semai', 1710, 'img/gawa ghee/lachcha semai.jpeg')">
+                            <i class="fas fa-shopping-cart"></i> Add To Cart
+                        </button>
+                        <button class="btn-buy" onclick="buyNow('Lachcha Semai', 1710, 'img/gawa ghee/lachcha semai.jpeg')">Buy now</button>
                     </div>
                 </div>
             </div>
@@ -846,15 +955,15 @@
                     </div>
                     <span class="save-tag">Save BDT 300</span>
                     <div class="actions">
-                        <button class="btn-cart"><i class="fas fa-shopping-cart"></i> Add To Cart</button>
-                        <button class="btn-buy">Buy now</button>
+                        <button class="btn-cart" onclick="addToCart('Sundarban Honey 1kg', 2200, 'img/gawa ghee/p3.jpg')">
+                            <i class="fas fa-shopping-cart"></i> Add To Cart
+                        </button>
+                        <button class="btn-buy" onclick="buyNow('Sundarban Honey 1kg', 2200, 'img/gawa ghee/p3.jpg')">Buy now</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
 </section>
 
 
@@ -864,11 +973,10 @@
 <section class="all-products">
     <div class="section-header">
         <h2 class="title-border">All Natural Honey</h2>
-        <a href="#" class="view-all">VIEW ALL ITEMS &rarr;</a>
+        <a href="product.html" class="view-all">VIEW ALL ITEMS &rarr;</a>
     </div>
 
     <div class="product-container">
-
         <div class="item-card">
             <span class="discount-badge">Save 9%</span>
             <div class="item-img">
@@ -880,7 +988,7 @@
                     <span class="price-now">BDT 1,000</span>
                     <span class="price-was">BDT 1,100</span>
                 </div>
-                <button class="add-to-cart-btn">
+                <button class="add-to-cart-btn" onclick="addToCart('Crystal Honey 1kg', 1000, 'img/allhoney/p1.jpg')">
                     <i class="fas fa-shopping-cart"></i> Add To Cart
                 </button>
             </div>
@@ -897,7 +1005,7 @@
                     <span class="price-now">BDT 1,140</span>
                     <span class="price-was">BDT 1,200</span>
                 </div>
-                <button class="add-to-cart-btn">
+                <button class="add-to-cart-btn" onclick="addToCart('Lichu Flower Honey 1kg', 1140, 'img/allhoney/p2.jpg')">
                     <i class="fas fa-shopping-cart"></i> Add To Cart
                 </button>
             </div>
@@ -914,13 +1022,13 @@
                     <span class="price-now">BDT 2,200</span>
                     <span class="price-was">BDT 2,500</span>
                 </div>
-                <button class="add-to-cart-btn">
+                <button class="add-to-cart-btn" onclick="addToCart('Sundarban Honey 1kg (p3)', 2200, 'img/allhoney/p3.jpg')">
                     <i class="fas fa-shopping-cart"></i> Add To Cart
                 </button>
             </div>
         </div>
 
-         <div class="item-card">
+        <div class="item-card">
             <span class="offer-badge">Offered Item</span>
             <div class="item-img">
                 <img src="img/allhoney/p4.jpg" alt="Sundarban Honey">
@@ -931,12 +1039,11 @@
                     <span class="price-now">BDT 2,200</span>
                     <span class="price-was">BDT 2,500</span>
                 </div>
-                <button class="add-to-cart-btn">
+                <button class="add-to-cart-btn" onclick="addToCart('Sundarban Honey 1kg (p4)', 2200, 'img/allhoney/p4.jpg')">
                     <i class="fas fa-shopping-cart"></i> Add To Cart
                 </button>
             </div>
         </div>
-
     </div>
 </section>
 
@@ -945,7 +1052,7 @@
 <section class="category-section">
     <div class="category-header">
         <h2 class="title-underline">Premium Dates</h2>
-        <a href="#" class="view-btn">VIEW ALL ITEMS &rarr;</a>
+        <a href="product.html" class="view-btn">VIEW ALL ITEMS &rarr;</a>
     </div>
 
     <div class="products-wrapper">
@@ -960,7 +1067,7 @@
                     <span class="current-price">BDT 1,900</span>
                     <span class="previous-price">BDT 2,000</span>
                 </div>
-                <button class="cart-btn">
+                <button class="cart-btn" onclick="addToCart('Egyptian Medjool Medium 1kg', 1900, 'img/premium dates/p1.jpg')">
                     <i class="fas fa-shopping-cart"></i> Add To Cart
                 </button>
             </div>
@@ -977,7 +1084,7 @@
                     <span class="current-price">BDT 2,090</span>
                     <span class="previous-price">BDT 2,200</span>
                 </div>
-                <button class="cart-btn">
+                <button class="cart-btn" onclick="addToCart('Ajwa Premium Dates Large 1kg (p2)', 2090, 'img/premium dates/p2.webp')">
                     <i class="fas fa-shopping-cart"></i> Add To Cart
                 </button>
             </div>
@@ -994,7 +1101,7 @@
                     <span class="current-price">BDT 2,090</span>
                     <span class="previous-price">BDT 2,200</span>
                 </div>
-                <button class="cart-btn">
+                <button class="cart-btn" onclick="addToCart('Ajwa Premium Dates Large 1kg (p3)', 2090, 'img/premium dates/p3.jpg')">
                     <i class="fas fa-shopping-cart"></i> Add To Cart
                 </button>
             </div>
@@ -1011,7 +1118,7 @@
                     <span class="current-price">BDT 2,090</span>
                     <span class="previous-price">BDT 2,200</span>
                 </div>
-                <button class="cart-btn">
+                <button class="cart-btn" onclick="addToCart('Ajwa Premium Dates Large 1kg (p4)', 2090, 'img/premium dates/p4.jpeg')">
                     <i class="fas fa-shopping-cart"></i> Add To Cart
                 </button>
             </div>
@@ -1019,13 +1126,12 @@
     </div>
 </section>
 
-
 <!-- cooking essential -->
 
 <section class="cooking-essentials">
     <div class="category-header">
         <h2 class="title-line">Cooking Essentials</h2>
-        <a href="#" class="view-all-link">VIEW ALL ITEMS &rarr;</a>
+        <a href="product.html" class="view-all-link">VIEW ALL ITEMS &rarr;</a>
     </div>
     <div class="items-grid">
         <div class="product-box">
@@ -1039,7 +1145,7 @@
                     <span class="now">BDT 855</span>
                     <span class="before">BDT 900</span>
                 </div>
-                <button class="add-cart-btn">
+                <button class="add-cart-btn" onclick="addToCart('Gawa Ghee 500gm', 855, 'img/gawa ghee/p1.jpg')">
                     <i class="fas fa-shopping-cart"></i> Add To Cart
                 </button>
             </div>
@@ -1056,7 +1162,7 @@
                     <span class="now">BDT 585</span>
                     <span class="before">BDT 620</span>
                 </div>
-                <button class="add-cart-btn">
+                <button class="add-cart-btn" onclick="addToCart('Deshi Mustard Oil 2 liter', 585, 'img/gawa ghee/deshi mustard oil.jpg')">
                     <i class="fas fa-shopping-cart"></i> Add To Cart
                 </button>
             </div>
@@ -1065,7 +1171,7 @@
         <div class="product-box">
             <span class="save-label">Save 5%</span>
             <div class="image-area">
-                <img src="img/gawa ghee/masoor dal.jpg" alt="Gawa Ghee">
+                <img src="img/gawa ghee/masoor dal.jpg" alt="Masoor dal">
             </div>
             <div class="info-area">
                 <h3>Masoor dal 1kg</h3>
@@ -1073,7 +1179,7 @@
                     <span class="now">BDT 855</span>
                     <span class="before">BDT 900</span>
                 </div>
-                <button class="add-cart-btn">
+                <button class="add-cart-btn" onclick="addToCart('Masoor dal 1kg', 855, 'img/gawa ghee/masoor dal.jpg')">
                     <i class="fas fa-shopping-cart"></i> Add To Cart
                 </button>
             </div>
@@ -1082,7 +1188,7 @@
         <div class="product-box">
             <span class="save-label">Save 6%</span>
             <div class="image-area">
-                <img src="img/gawa ghee/chilipowder.jpg" alt="Mustard Oil">
+                <img src="img/gawa ghee/chilipowder.jpg" alt="Chili Powder">
             </div>
             <div class="info-area">
                 <h3>Chili(morich) powder 500gm</h3>
@@ -1090,7 +1196,7 @@
                     <span class="now">BDT 585</span>
                     <span class="before">BDT 620</span>
                 </div>
-                <button class="add-cart-btn">
+                <button class="add-cart-btn" onclick="addToCart('Chili powder 500gm', 585, 'img/gawa ghee/chilipowder.jpg')">
                     <i class="fas fa-shopping-cart"></i> Add To Cart
                 </button>
             </div>
@@ -1105,13 +1211,14 @@
 <section class="cooking-essentials">
     <div class="category-header">
         <h2 class="title-line">Just for you</h2>
-        <a href="#" class="view-all-link">VIEW ALL ITEMS &rarr;</a>
+        <a href="product.html" class="view-all-link">VIEW ALL ITEMS &rarr;</a>
     </div>
+    
     <div class="items-grid">
         <div class="product-box">
             <span class="save-label">Save 5%</span>
             <div class="image-area">
-                <img src="img/premium dates/p1.jpg" alt="Gawa Ghee">
+                <img src="img/premium dates/p1.jpg" alt="Egyptian Medjool">
             </div>
             <div class="info-area">
                 <h3>Egyptian Medjool Medium 1kg</h3>
@@ -1119,7 +1226,7 @@
                     <span class="now">BDT 855</span>
                     <span class="before">BDT 900</span>
                 </div>
-                <button class="add-cart-btn">
+                <button class="add-cart-btn" onclick="addToCart('Egyptian Medjool Medium 1kg', 855, 'img/premium dates/p1.jpg')">
                     <i class="fas fa-shopping-cart"></i> Add To Cart
                 </button>
             </div>
@@ -1128,7 +1235,7 @@
         <div class="product-box">
             <span class="save-label">Save 6%</span>
             <div class="image-area">
-                <img src="img/premium dates/p4.jpeg" alt="Mustard Oil">
+                <img src="img/premium dates/p4.jpeg" alt="Ajwa Dates">
             </div>
             <div class="info-area">
                 <h3>Ajwa Premium Dates Large 1kg</h3>
@@ -1136,7 +1243,7 @@
                     <span class="now">BDT 585</span>
                     <span class="before">BDT 620</span>
                 </div>
-                <button class="add-cart-btn">
+                <button class="add-cart-btn" onclick="addToCart('Ajwa Premium Dates Large 1kg', 585, 'img/premium dates/p4.jpeg')">
                     <i class="fas fa-shopping-cart"></i> Add To Cart
                 </button>
             </div>
@@ -1145,7 +1252,7 @@
         <div class="product-box">
             <span class="save-label">Save 5%</span>
             <div class="image-area">
-                <img src="img/gawa ghee/masoor dal.jpg" alt="Gawa Ghee">
+                <img src="img/gawa ghee/masoor dal.jpg" alt="Masoor dal">
             </div>
             <div class="info-area">
                 <h3>Masoor dal 1kg</h3>
@@ -1153,7 +1260,7 @@
                     <span class="now">BDT 855</span>
                     <span class="before">BDT 900</span>
                 </div>
-                <button class="add-cart-btn">
+                <button class="add-cart-btn" onclick="addToCart('Masoor dal 1kg', 855, 'img/gawa ghee/masoor dal.jpg')">
                     <i class="fas fa-shopping-cart"></i> Add To Cart
                 </button>
             </div>
@@ -1162,7 +1269,7 @@
         <div class="product-box">
             <span class="save-label">Save 6%</span>
             <div class="image-area">
-                <img src="img/gawa ghee/chilipowder.jpg" alt="Mustard Oil">
+                <img src="img/gawa ghee/chilipowder.jpg" alt="Chili Powder">
             </div>
             <div class="info-area">
                 <h3>Chili(morich) powder 500gm</h3>
@@ -1170,19 +1277,18 @@
                     <span class="now">BDT 585</span>
                     <span class="before">BDT 620</span>
                 </div>
-                <button class="add-cart-btn">
+                <button class="add-cart-btn" onclick="addToCart('Chili powder 500gm', 585, 'img/gawa ghee/chilipowder.jpg')">
                     <i class="fas fa-shopping-cart"></i> Add To Cart
                 </button>
             </div>
         </div>
-
     </div>
 
     <div class="products-wrapper">
         <div class="product-item">
             <span class="save-badge">Save 5%</span>
             <div class="img-container">
-                <img src="img/gawa ghee/p1.jpg" alt="Medjool Dates">
+                <img src="img/gawa ghee/p1.jpg" alt="Gawa Ghee">
             </div>
             <div class="info-container">
                 <h3>Gawa Ghee 500gm</h3>
@@ -1190,7 +1296,7 @@
                     <span class="current-price">BDT 1,900</span>
                     <span class="previous-price">BDT 2,000</span>
                 </div>
-                <button class="cart-btn">
+                <button class="cart-btn" onclick="addToCart('Gawa Ghee 500gm', 1900, 'img/gawa ghee/p1.jpg')">
                     <i class="fas fa-shopping-cart"></i> Add To Cart
                 </button>
             </div>
@@ -1202,12 +1308,12 @@
                 <img src="img/premium dates/p2.webp" alt="Ajwa Dates">
             </div>
             <div class="info-container">
-                <h3>Ajwa Premium Dates Large 1kg</h3>
+                <h3>Ajwa Premium Dates 1kg</h3>
                 <div class="pricing">
                     <span class="current-price">BDT 2,090</span>
                     <span class="previous-price">BDT 2,200</span>
                 </div>
-                <button class="cart-btn">
+                <button class="cart-btn" onclick="addToCart('Ajwa Premium Dates 1kg', 2090, 'img/premium dates/p2.webp')">
                     <i class="fas fa-shopping-cart"></i> Add To Cart
                 </button>
             </div>
@@ -1219,12 +1325,12 @@
                 <img src="img/premium dates/p3.jpg" alt="Ajwa Dates">
             </div>
             <div class="info-container">
-                <h3>Ajwa Premium Dates Large 1kg</h3>
+                <h3>Ajwa Premium Large 1kg</h3>
                 <div class="pricing">
                     <span class="current-price">BDT 2,090</span>
                     <span class="previous-price">BDT 2,200</span>
                 </div>
-                <button class="cart-btn">
+                <button class="cart-btn" onclick="addToCart('Ajwa Premium Large 1kg', 2090, 'img/premium dates/p3.jpg')">
                     <i class="fas fa-shopping-cart"></i> Add To Cart
                 </button>
             </div>
@@ -1233,7 +1339,7 @@
         <div class="product-item">
             <span class="save-badge">Save 5%</span>
             <div class="img-container">
-                <img src="img/gawa ghee/deshi mustard oil.jpg" alt="Ajwa Dates">
+                <img src="img/gawa ghee/deshi mustard oil.jpg" alt="Mustard Oil">
             </div>
             <div class="info-container">
                 <h3>Deshi Mustard Oil 2 liter</h3>
@@ -1241,14 +1347,12 @@
                     <span class="current-price">BDT 2,090</span>
                     <span class="previous-price">BDT 2,200</span>
                 </div>
-                <button class="cart-btn">
+                <button class="cart-btn" onclick="addToCart('Deshi Mustard Oil 2 liter', 2090, 'img/gawa ghee/deshi mustard oil.jpg')">
                     <i class="fas fa-shopping-cart"></i> Add To Cart
                 </button>
             </div>
         </div>
-
     </div>
-
 </section>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -1426,6 +1530,58 @@
         </div>
     </div>
     <!-- Footer End -->
+
+
+
+<script>
+    // ১. পেজ লোড হওয়ার সাথে সাথে কার্ট কাউন্ট আপডেট করা
+    document.addEventListener('DOMContentLoaded', function() {
+        updateCartCount();
+    });
+
+    // ২. আইটেম কার্টে যোগ করার মেইন ফাংশন (অবজেক্ট হিসেবে)
+    function addToCart(name, price, img) {
+        // মেমোরি থেকে বর্তমান লিস্ট আনা (না থাকলে খালি অ্যারে)
+        let cart = JSON.parse(localStorage.getItem('saleZenCart')) || [];
+        
+        // নতুন আইটেম তৈরি
+        const product = {
+            name: name,
+            price: parseFloat(price),
+            img: img
+        };
+
+        // লিস্টে যোগ করা এবং সেভ করা
+        cart.push(product);
+        localStorage.setItem('saleZenCart', JSON.stringify(cart));
+        
+        // কাউন্টার আপডেট
+        updateCartCount();
+        
+        alert(name + " has been added to your cart!");
+    }
+
+    // ৩. 'Add to cart' বাটন যেগুলোতে ডেটা নেই সেগুলোর জন্য (পুরানো বাটন সাপোর্ট)
+    function addToCartClick() {
+        // যদি কোনো ডিফল্ট আইটেম যোগ করতে চান
+        addToCart('Organic Product', 100, 'img/product-1.jpg');
+    }
+
+    // ৪. সরাসরি কার্ট পেজে নিয়ে যাওয়া (Buy Now)
+    function buyNow(name, price, img) {
+        addToCart(name, price, img);
+        window.location.href = 'cart.html';
+    }
+
+    // ৫. নেভিগেশন বারের সংখ্যা আপডেট করা (লিস্টের দৈর্ঘ্য অনুযায়ী)
+    function updateCartCount() {
+        let cart = JSON.parse(localStorage.getItem('saleZenCart')) || [];
+        const cartBadge = document.getElementById('cart-count');
+        if (cartBadge) {
+            cartBadge.innerText = cart.length;
+        }
+    }
+</script>
 
 
     <!-- Back to Top -->

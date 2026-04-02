@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | saleZen Organic</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --organic-green: #2d6a4f;
+            --soft-cream: #f9f7f2;
+            --leaf-green: #52b788;
+            --earth-brown: #6d4c41;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--soft-cream);
+            color: var(--organic-green);
+        }
+
+        h1, h2, .brand-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Hero Section */
+        .service-hero {
+            padding: 80px 0;
+            background: linear-gradient(rgba(45, 106, 79, 0.05), rgba(45, 106, 79, 0.02));
+            border-bottom: 1px solid rgba(45, 106, 79, 0.1);
+        }
+
+        /* Service Cards */
+        .service-box {
+            background: white;
+            border-radius: 30px;
+            padding: 40px;
+            transition: all 0.4s ease;
+            border: 1px solid transparent;
+            text-align: center;
+        }
+
+        .service-box:hover {
+            transform: translateY(-10px);
+            border-color: var(--leaf-green);
+            box-shadow: 0 20px 40px rgba(45, 106, 79, 0.08);
+        }
+
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            background: var(--soft-cream);
+            color: var(--organic-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 25px;
+            transition: 0.3s;
+        }
+
+        .service-box:hover .icon-circle {
+            background: var(--organic-green);
+            color: white;
+        }
+
+        /* Process Steps */
+        .process-line {
+            position: relative;
+        }
+
+        .process-step {
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .step-count {
+            width: 40px;
+            height: 40px;
+            background: var(--organic-green);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        /* Subscription Banner */
+        .sub-banner {
+            background: var(--organic-green);
+            color: white;
+            border-radius: 40px;
+            padding: 60px;
+            margin-top: 50px;
+        }
+
+        .btn-organic {
+            background: var(--leaf-green);
+            color: white;
+            border: none;
+            padding: 12px 35px;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .btn-organic:hover {
+            background: white;
+            color: var(--organic-green);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="service-hero text-center">
+        <div class="container">
+            <h1 class="display-3 mb-3">Our Organic <span class="text-decoration-underline">Services</span></h1>
+            <p class="lead text-muted mx-auto" style="max-width: 600px;">
+                We connect local farmers directly to your table, ensuring 100% chemical-free nutrition for your family.
+            </p>
+        </div>
+    </header>
+
+    <section class="container py-5">
+        <div class="row g-4">
+            
+            <div class="col-md-4">
+                <div class="service-box">
+                    <div class="icon-circle">
+                        <i class="bi bi-truck"></i>
+                    </div>
+                    <h3 class="fw-bold">Doorstep Delivery</h3>
+                    <p class="text-muted small">Daily fresh harvests delivered within 12 hours of picking. Temperature-controlled transit to keep nutrients alive.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="service-box">
+                    <div class="icon-circle">
+                        <i class="bi bi-calendar-check"></i>
+                    </div>
+                    <h3 class="fw-bold">Weekly Subscriptions</h3>
+                    <p class="text-muted small">Customizable organic boxes delivered every weekend. No more grocery store queues—just fresh food on repeat.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="service-box">
+                    <div class="icon-circle">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h3 class="fw-bold">Quality Lab Testing</h3>
+                    <p class="text-muted small">Every batch is tested for pesticides and heavy metals. We provide a QR code on every pack for full traceability.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-5">
+                <h2 class="display-5 mb-4">How it <br><span class="text-success">Works</span></h2>
+                <p class="text-muted mb-4">We believe in a transparent supply chain. Here is exactly how your food moves from the farm to your kitchen.</p>
+                <img src="https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?q=80&w=1470&auto=format&fit=crop" class="img-fluid rounded-5 shadow" alt="Farm">
+            </div>
+            <div class="col-lg-6 offset-lg-1">
+                <div class="process-line">
+                    <div class="process-step">
+                        <div class="step-count">1</div>
+                        <h5 class="fw-bold">Sourcing from Gazipur & Sylhet</h5>
+                        <p class="text-muted small">We partner with certified organic small-hold farmers who use traditional composting methods.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-count">2</div>
+                        <h5 class="fw-bold">Strict Quality Check</h5>
+                        <p class="text-muted small">Produce is cleaned using ozone technology to remove surface impurities without chemicals.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-count">3</div>
+                        <h5 class="fw-bold">Eco-Friendly Packaging</h5>
+                        <p class="text-muted small">We use biodegradable cornstarch bags and reusable crates to minimize plastic waste.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mb-5">
+        <div class="sub-banner text-center shadow-lg">
+            <h2 class="mb-3">Get 20% Off Your First Monthly Box</h2>
+            <p class="mb-4 opacity-75">Join 5,000+ families in Dhaka eating healthy, organic meals every day.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <button class="btn btn-organic btn-lg">View Box Plans</button>
+                <button class="btn btn-outline-light btn-lg rounded-pill px-4">Contact Support</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-5 text-center">
+        <h4 class="brand-font">SoftZenIT Organic</h4>
+        <p class="text-muted small mt-2">© 2026 Fresh Heritage Ltd. Dhaka, Bangladesh.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

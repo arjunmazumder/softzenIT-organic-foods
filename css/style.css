@@ -1,3 +1,24 @@
+/* saleZen Cart Badge Fix */
+.position-relative {
+    display: inline-block; /* আইকন এবং ব্যাজকে এক জায়গায় রাখার জন্য */
+}
+
+#cart-count {
+    /* বর্তমানের start-100 এবং translate-middle পরিবর্তন করে নিচেরগুলো দিন */
+    top: -5px !important; 
+    right: -10px !important; 
+    left: auto !important; /* start-100 ক্লাস ওভাররাইড করার জন্য */
+    transform: none !important;
+    padding: 3px 6px;
+    font-size: 10px;
+    border: 2px solid white; /* সাদা বর্ডার দিলে ব্যাজটি ফুটে ওঠে */
+}
+
+.bi-cart4 {
+    font-size: 1.8rem; /* আইকনটি একটু বড় করার জন্য */
+    color: #1a1a1a;
+}
+
 
 
 

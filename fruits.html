@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sun-Ripened Fruits | saleZen Tropical</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Outfit:wght@600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --fruit-orange: #ff8c42;
+            --fruit-berry: #ef476f;
+            --fruit-bg: #fffaf0;
+            --fruit-dark: #2d1e1e;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--fruit-bg);
+            color: var(--fruit-dark);
+        }
+
+        .navbar-brand {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: var(--fruit-orange) !important;
+        }
+
+        /* Hero Section */
+        .fruit-hero {
+            background: linear-gradient(rgba(255, 140, 66, 0.1), rgba(239, 71, 111, 0.05));
+            border-radius: 40px;
+            padding: 60px;
+            margin-bottom: 50px;
+            border: 2px dashed rgba(255, 140, 66, 0.2);
+        }
+
+        /* Fruit Card Design */
+        .fruit-card {
+            background: white;
+            border-radius: 30px;
+            padding: 25px;
+            border: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .fruit-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(255, 140, 66, 0.15);
+        }
+
+        .img-wrapper {
+            background: #fff5e6;
+            border-radius: 25px;
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .fruit-img {
+            max-width: 80%;
+            filter: drop-shadow(0 20px 30px rgba(0,0,0,0.1));
+            transition: 0.5s ease;
+        }
+
+        .fruit-card:hover .fruit-img {
+            transform: translateY(-10px) rotate(-5deg);
+        }
+
+        /* Custom UI Elements */
+        .sweetness-meter {
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--fruit-berry);
+            background: rgba(239, 71, 111, 0.1);
+            padding: 3px 10px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .price-tag {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--fruit-dark);
+        }
+
+        .btn-cart-fruit {
+            background: var(--fruit-orange);
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 12px;
+            border-radius: 15px;
+            font-weight: 700;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        .btn-cart-fruit:hover {
+            background: var(--fruit-berry);
+            box-shadow: 0 10px 20px rgba(239, 71, 111, 0.3);
+        }
+
+        .stock-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: white;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 50px;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-white py-3 shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fs-2" href="#">Soft<span class="text-dark">ZenIT</span> 🍓</a>
+            <div class="d-flex gap-3 align-items-center">
+                <div class="d-none d-lg-block bg-light px-3 py-2 rounded-pill small">
+                    <i class="bi bi-truck text-warning me-2"></i> Free Delivery Over BDT 1000
+                </div>
+                <a href="#" class="btn btn-dark rounded-circle" style="width: 45px; height: 45px; display: flex; align-items: center; justify-content: center;">
+                    <i class="bi bi-bag-heart fs-5"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        
+        <div class="fruit-hero text-center text-md-start">
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <span class="badge bg-danger mb-3 px-3 py-2 rounded-pill fw-bold">Limited: Alphonso Season</span>
+                    <h1 class="display-4 fw-800" style="font-family: 'Outfit', sans-serif;">Juicy, Sun-Drenched <br><span class="text-warning">Tropical Treats</span></h1>
+                    <p class="lead text-muted mb-4">Straight from the orchards to your doorstep. Guaranteed sweetness in every bite.</p>
+                    <button class="btn btn-orange btn-lg rounded-pill px-5 text-white fw-bold shadow-lg" style="background: var(--fruit-orange);">Explore Seasonal</button>
+                </div>
+                <div class="col-md-5 d-none d-md-block text-center">
+                    <i class="bi bi-brightness-high text-warning display-1 opacity-25"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="fruit-card">
+                    <div class="img-wrapper">
+                        <span class="stock-badge shadow-sm">In Stock</span>
+                        <img src="https://images.unsplash.com/photo-1587334274328-64186a80aeee?q=80&w=1781&auto=format&fit=crop" class="fruit-img" alt="Mango">
+                    </div>
+                    <span class="sweetness-meter">Very Sweet ★★★</span>
+                    <h5 class="fw-bold mb-1">Premium Alphonso Mango</h5>
+                    <p class="text-muted small">Imported Quality (Box of 4)</p>
+                    <div class="d-flex justify-content-between align-items-end mt-3">
+                        <span class="price-tag">BDT 450</span>
+                        <span class="text-muted small mb-1">per box</span>
+                    </div>
+                    <button class="btn-cart-fruit">Add to Basket</button>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="fruit-card">
+                    <div class="img-wrapper" style="background: #ffe6eb;">
+                        <img src="img/fruits/p1.jpg">
+                    </div>
+                    <span class="sweetness-meter" style="color: #fb8500; background: rgba(251, 133, 0, 0.1);">Tangy & Sweet ★★</span>
+                    <h5 class="fw-bold mb-1">Giant Honey Pineapple</h5>
+                    <p class="text-muted small">Ready to Eat (1.5kg+)</p>
+                    <div class="d-flex justify-content-between align-items-end mt-3">
+                        <span class="price-tag">BDT 180</span>
+                        <span class="text-muted small mb-1">per piece</span>
+                    </div>
+                    <button class="btn-cart-fruit">Add to Basket</button>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="fruit-card">
+                    <div class="img-wrapper" style="background: #e6f7ff;">
+                        <img src="https://images.unsplash.com/photo-1619546813926-a78fa6372cd2?q=80&w=1740&auto=format&fit=crop" class="fruit-img" alt="Apple">
+                    </div>
+                    <span class="sweetness-meter">Crisp & Mild ★</span>
+                    <h5 class="fw-bold mb-1">Pink Lady Apples</h5>
+                    <p class="text-muted small">High Fiber (Pack of 6)</p>
+                    <div class="d-flex justify-content-between align-items-end mt-3">
+                        <span class="price-tag">BDT 320</span>
+                        <span class="text-muted small mb-1">per pack</span>
+                    </div>
+                    <button class="btn-cart-fruit">Add to Basket</button>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="fruit-card">
+                    <div class="img-wrapper" style="background: #f3e6ff;">
+                        <img src="img/fruits/strawberries.jpg">
+                    </div>
+                    <span class="sweetness-meter" style="color: var(--fruit-berry); background: rgba(239, 71, 111, 0.1);">Extra Sweet ★★★★</span>
+                    <h5 class="fw-bold mb-1">Winter Strawberries</h5>
+                    <p class="text-muted small">Hand-picked (250g)</p>
+                    <div class="d-flex justify-content-between align-items-end mt-3">
+                        <span class="price-tag">BDT 280</span>
+                        <span class="text-muted small mb-1">per tray</span>
+                    </div>
+                    <button class="btn-cart-fruit">Add to Basket</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="py-5 bg-white border-top">
+        <div class="container text-center">
+            <h4 class="fw-800" style="color: var(--fruit-orange);">saleZen Tropical</h4>
+            <div class="d-flex justify-content-center gap-3 my-3">
+                <a href="#" class="text-muted text-decoration-none small">Privacy Policy</a>
+                <a href="#" class="text-muted text-decoration-none small">Refund Policy</a>
+                <a href="#" class="text-muted text-decoration-none small">Store Locator</a>
+            </div>
+            <p class="text-muted small mt-4">© 2026 Sun-Ripened Quality. Dhaka, Bangladesh.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
